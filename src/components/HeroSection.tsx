@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { ArrowDown, Mail, MapPin, Github, Linkedin, Download } from "lucide-react";
-import ahmedPhoto from "@/assets/ahmed-photo.png";
 import heroBg from "@/assets/hero-bg.jpg";
+
+// Lazy load the large PNG image
+const ahmedPhotoUrl = new URL("@/assets/ahmed-photo.png", import.meta.url).href;
 
 const roles = [
   "Data Scientist",
@@ -100,9 +102,10 @@ const HeroSection = () => {
 
           <div className="w-52 h-52 md:w-72 md:h-72 rounded-full overflow-hidden border-2 border-primary/50 animate-pulse-glow relative">
             <img
-              src={ahmedPhoto}
+              src={ahmedPhotoUrl}
               alt="Ahmed Ayoubi"
               className="w-full h-full object-cover"
+              loading="lazy"
             />
             {/* Status badge */}
             <div className="absolute bottom-4 right-4 flex items-center gap-1.5 bg-background/90 backdrop-blur-sm px-3 py-1.5 rounded-full border border-primary/30">
