@@ -4,6 +4,7 @@ import { ArrowDown, Mail, MapPin, Github, Linkedin, Download } from "lucide-reac
 import heroBg from "@/assets/hero-bg.jpg";
 import ahmedPhotoWebp from "@/assets/ahmed-photo.webp";
 import ahmedPhotoPng from "@/assets/ahmed-photo.png";
+import { LogosCarousel } from "./LogosCarousel";
 
 const roles = [
   "Data Scientist",
@@ -217,6 +218,19 @@ const HeroSection = () => {
           </div>
         </motion.div>
       </div>
+
+      {/* Logos Carousel */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 1 }}
+        className="mt-16 md:mt-24 px-4"
+      >
+        <p className="text-center text-sm text-muted-foreground mb-6 uppercase tracking-widest">
+          Expériences & Formations
+        </p>
+        <LogosCarousel />
+      </motion.div>
 
       {/* Scroll indicator */}
       <motion.div
