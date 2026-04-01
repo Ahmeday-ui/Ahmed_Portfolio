@@ -41,7 +41,7 @@ const HeroSection = () => {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      className="relative min-h-screen flex items-start justify-center overflow-hidden"
     >
       {/* Background */}
       <div className="absolute inset-0">
@@ -80,7 +80,7 @@ const HeroSection = () => {
       <div className="absolute top-1/4 right-1/4 w-96 h-96 rounded-full bg-primary/5 blur-[120px] pointer-events-none" />
       <div className="absolute bottom-1/3 left-1/4 w-64 h-64 rounded-full bg-primary/3 blur-[100px] pointer-events-none" />
 
-      <div className="relative z-10 max-w-6xl mx-auto px-6 pt-24 pb-16 flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+      <div className="relative z-10 max-w-6xl mx-auto px-6 pt-16 pb-16 flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
         {/* Photo */}
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
@@ -224,7 +224,7 @@ const HeroSection = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 1 }}
-        className="mt-16 md:mt-24 px-4"
+        className="mt-8 md:mt-12 px-4"
       >
         <p className="text-center text-sm text-muted-foreground mb-6 uppercase tracking-widest">
           Expériences & Formations
