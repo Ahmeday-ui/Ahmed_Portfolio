@@ -68,7 +68,7 @@ const CircularProgress = ({ name, level, delay }: { name: string; level: number;
             strokeLinecap="round"
             strokeDasharray={circumference}
             strokeDashoffset={isInView ? circumference - (level / 100) * circumference : circumference}
-            className="transition-all duration-[1.5s] ease-out"
+            className="transition-all duration-&lsqb;1.5s&rsqb; ease-out"
             style={{ filter: "drop-shadow(0 0 6px hsl(var(--primary) / 0.4))" }}
           />
         </svg>
