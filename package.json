@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "build:prod": "NODE_OPTIONS='--max-old-space-size=7168' vite build --mode production",
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
     "preview": "vite preview",
