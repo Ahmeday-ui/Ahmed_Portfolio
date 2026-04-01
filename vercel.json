@@ -3,6 +3,11 @@
   "outputDirectory": "dist",
   "devCommand": "npm run dev",
   "env": {
-    "NODE_OPTIONS": "--max-old-space-size=3072"
+    "NODE_OPTIONS": "--max-old-space-size=4096 --max_http_header_size=16384"
+  },
+  "functions": {
+    "api/**/*.js": {
+      "maxDuration": 60
+    }
   }
 }
