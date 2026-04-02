@@ -15,15 +15,15 @@ const testimonials: Testimonial[] = [
   {
     name: "Youssef BOUYRIG",
     title: "Head of Insights and Data",
-    company: "Capgemini",
-    text: "Ahmed a démontré une expertise exceptionnelle en Data Science et Machine Learning. Son travail sur les Transformers pour la segmentation d'images SAR a dépassé toutes nos attentes. Une rigueur scientifique exemplaire combinée à une grande capacité d'adaptation.",
+    company: "Capgemini-Casablanca-Maroc",
+    text: "Ahmed a démontré une expertise exceptionnelle en Data Science et Machine Learning. Son travail sur les algorithmes de vérification et de nettoyage de données en environnement Azure Cloud, avec une réduction des erreurs de saisie de 95 % a dépassé toutes nos attentes. Une rigueur scientifique exemplaire combinée à une grande capacité d'adaptation.",
     rating: 5,
     avatar: "YB",
   },
   {
     name: "Eric Guillerme",
     title: "Chef Projet Tech/IA Data",
-    company: "Cikaba",
+    company: "Cikaba-Clermont Ferrand",
     text: "Un développeur passionné et rigoureux. Sa capacité à transformer des concepts complexes en solutions pragmatiques est remarquable. Ahmed apporte une vraie valeur ajoutée sur les projets IA et fait preuve d'une grande autonomie.",
     rating: 5,
     avatar: "EG",
