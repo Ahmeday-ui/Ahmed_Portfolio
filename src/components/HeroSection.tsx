@@ -49,14 +49,6 @@ const HeroSection = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-background/80 to-background" />
       </div>
 
-      {/* Animated grid lines */}
-      <div
-        className="absolute inset-0 opacity-[0.03]"
-        style={{
-          backgroundImage: `linear-gradient(hsl(var(--primary)) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--primary)) 1px, transparent 1px)`,
-          backgroundSize: "60px 60px",
-        }}
-      />
 
       {/* Floating particles */}
       {[...Array(8)].map((_, i) => (

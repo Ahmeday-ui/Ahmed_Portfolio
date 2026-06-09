@@ -282,3 +282,122 @@ body::after {
   0%   { top: -10%; }
   100% { top: 110%; }
 }
+
+/* ─── NEURAL THEME (default — explicit for clarity) ──────────────────────── */
+[data-theme="neural"] {
+  --background: 220 22% 6%;
+  --primary: 174 72% 52%;
+}
+
+/* ─── OBSIDIAN THEME ─────────────────────────────────────────────────────── */
+[data-theme="obsidian"] {
+  --background:        230 28% 5%;
+  --foreground:        38  25% 90%;
+  --card:              230 22% 8%;
+  --card-foreground:   38  25% 90%;
+  --popover:           230 22% 8%;
+  --popover-foreground:38  25% 90%;
+  --primary:           44  88% 58%;     /* gold */
+  --primary-foreground:230 28% 8%;
+  --secondary:         230 20% 13%;
+  --secondary-foreground:38 20% 78%;
+  --muted:             230 18% 11%;
+  --muted-foreground:  220 12% 50%;
+  --accent:            44  88% 58%;
+  --accent-foreground: 230 28% 8%;
+  --border:            40  20% 18%;
+  --input:             230 20% 13%;
+  --ring:              44  88% 58%;
+  --glow:              44  88% 58%;
+  --gradient-primary:  linear-gradient(135deg, hsl(44,88%,58%), hsl(174,72%,52%));
+  --shadow-glow:       0 0 40px -8px hsl(44 88% 58% / 0.3);
+  --shadow-glow-sm:    0 0 18px -4px hsl(44 88% 58% / 0.22);
+}
+
+/* Obsidian: aurora mesh background */
+[data-theme="obsidian"] body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse 55% 50% at 12% 50%, hsl(44  88% 58% / 0.07) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 60% at 88% 20%, hsl(174 72% 52% / 0.06) 0%, transparent 55%),
+    radial-gradient(ellipse 40% 45% at 65% 82%, hsl(258 65% 64% / 0.05) 0%, transparent 50%);
+  animation: aurora-drift 18s ease-in-out infinite alternate;
+}
+
+/* Obsidian: frosted glass cards */
+[data-theme="obsidian"] .bg-card {
+  background-color: hsl(var(--card) / 0.55) !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+}
+[data-theme="obsidian"] .bg-card\/40,
+[data-theme="obsidian"] .bg-card\/50,
+[data-theme="obsidian"] .bg-card\/60 {
+  background-color: hsl(var(--card) / 0.4) !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+}
+
+/* Obsidian: selection + scrollbar */
+[data-theme="obsidian"] ::selection            { background: hsl(44 88% 58% / 0.25); color: hsl(44 88% 85%); }
+[data-theme="obsidian"] ::-webkit-scrollbar-thumb       { background: hsl(44 88% 58% / 0.4); }
+[data-theme="obsidian"] ::-webkit-scrollbar-thumb:hover { background: hsl(44 88% 58% / 0.7); }
+
+/* ─── CIPHER THEME ───────────────────────────────────────────────────────── */
+[data-theme="cipher"] {
+  --background:        130 30% 4%;
+  --foreground:        120 45% 88%;
+  --card:              130 25% 7%;
+  --card-foreground:   120 45% 88%;
+  --popover:           130 25% 7%;
+  --popover-foreground:120 45% 88%;
+  --primary:           120 65% 52%;    /* terminal green */
+  --primary-foreground:130 30% 5%;
+  --secondary:         130 22% 12%;
+  --secondary-foreground:120 40% 72%;
+  --muted:             130 20% 10%;
+  --muted-foreground:  130 15% 50%;
+  --accent:            120 65% 52%;
+  --accent-foreground: 130 30% 5%;
+  --border:            130 20% 14%;
+  --input:             130 22% 12%;
+  --ring:              120 65% 52%;
+  --glow:              120 65% 52%;
+  --gradient-primary:  linear-gradient(135deg, hsl(120,65%,52%), hsl(150,70%,48%));
+  --shadow-glow:       0 0 40px -8px hsl(120 65% 52% / 0.3);
+  --shadow-glow-sm:    0 0 18px -4px hsl(120 65% 52% / 0.22);
+}
+
+/* Cipher: horizontal scan-lines */
+[data-theme="cipher"] body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 9989;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 3px,
+    hsl(120 65% 52% / 0.012) 3px,
+    hsl(120 65% 52% / 0.012) 4px
+  );
+}
+
+/* Cipher: monospace headings */
+[data-theme="cipher"] h1,
+[data-theme="cipher"] h2,
+[data-theme="cipher"] h3,
+[data-theme="cipher"] h4 {
+  font-family: 'SF Mono', 'Fira Code', 'Cascadia Code', monospace;
+  letter-spacing: -0.03em;
+}
+
+/* Cipher: selection + scrollbar */
+[data-theme="cipher"] ::selection            { background: hsl(120 65% 52% / 0.25); color: hsl(120 65% 85%); }
+[data-theme="cipher"] ::-webkit-scrollbar-thumb       { background: hsl(120 65% 52% / 0.4); }
+[data-theme="cipher"] ::-webkit-scrollbar-thumb:hover { background: hsl(120 65% 52% / 0.7); }
