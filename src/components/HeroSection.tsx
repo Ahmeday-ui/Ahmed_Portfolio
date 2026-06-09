@@ -79,9 +79,12 @@ const HeroSection = () => {
         />
       ))}
 
-      {/* Glow orbs */}
-      <div className="absolute top-1/4 right-1/4 w-96 h-96 rounded-full bg-primary/5 blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-1/3 left-1/4 w-64 h-64 rounded-full bg-primary/3 blur-[100px] pointer-events-none" />
+      {/* Glow orbs — teal + violet aurora */}
+      <div className="aurora-orb w-[480px] h-[480px] top-[15%] right-[18%] bg-primary/6" />
+      <div className="aurora-orb w-[320px] h-[320px] bottom-[25%] left-[12%] bg-[hsl(258_65%_64%/0.07)]"
+           style={{ animationDelay: "-7s", animationDirection: "alternate-reverse" }} />
+      <div className="aurora-orb w-[200px] h-[200px] top-[55%] right-[8%] bg-[hsl(258_65%_64%/0.05)]"
+           style={{ animationDelay: "-3s" }} />
 
       {/* Wrapper principal — hero + carousel dans le flux normal */}
       <div className="relative z-10 w-full flex flex-col items-center">
